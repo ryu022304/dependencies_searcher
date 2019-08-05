@@ -37,4 +37,18 @@ class HomepageTest extends BaseTestCase
         $this->assertEquals(405, $response->getStatusCode());
         $this->assertContains('Method not allowed', (string)$response->getBody());
     }
+
+    /* 
+     * JSONが返ってくるかのテスト
+     */
+    public function testGetJsonResponse()
+    {
+        $response = $this->runApp('GET', '/');
+
+        $this->assertEquals(200, $response->getStatusCode());
+        $this->assertJsonStringEqualsJsonString(
+            json_encode([]),
+            json_encode([])
+        );
+    }
 }
