@@ -1,0 +1,28 @@
+{
+  "name": "dependencies_searcher",
+  "version": "1.0.0",
+  "description": "OSパッケージの依存性を確認する",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --hot",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryu022304/dependencies_searcher.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryu022304/dependencies_searcher/issues"
+  },
+  "homepage": "https://github.com/ryu022304/dependencies_searcher#readme",
+  "dependencies": {
+    "npm-check-updates": "^3.1.20"
+  },
+  "devDependencies": {
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.8.0"
+  }
+}
