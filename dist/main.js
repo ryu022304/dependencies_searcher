@@ -3277,7 +3277,19 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_Header_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/Header.vue */ \"./src/components/Header.vue\");\n/* harmony import */ var _components_InputForm_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/InputForm.vue */ \"./src/components/InputForm.vue\");\n//\n//\n//\n//\n//\n//\n//\n\n\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  name: 'app',\n  components: {\n    Header: _components_Header_vue__WEBPACK_IMPORTED_MODULE_0__[\"default\"],\n    InputForm: _components_InputForm_vue__WEBPACK_IMPORTED_MODULE_1__[\"default\"]\n  }\n});\n\n\n//# sourceURL=webpack:///./src/App.vue?./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_Header_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/Header.vue */ \"./src/components/Header.vue\");\n/* harmony import */ var _components_InputForm_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/InputForm.vue */ \"./src/components/InputForm.vue\");\n/* harmony import */ var _components_CardArea_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/CardArea.vue */ \"./src/components/CardArea.vue\");\n//\n//\n//\n//\n//\n//\n//\n//\n\n\n\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  name: 'app',\n  components: {\n    Header: _components_Header_vue__WEBPACK_IMPORTED_MODULE_0__[\"default\"],\n    InputForm: _components_InputForm_vue__WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n    CardArea: _components_CardArea_vue__WEBPACK_IMPORTED_MODULE_2__[\"default\"]\n  }\n});\n\n\n//# sourceURL=webpack:///./src/App.vue?./node_modules/vue-loader/lib??vue-loader-options");
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/index.js?!./src/components/CardArea.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib??vue-loader-options!./src/components/CardArea.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n    \n});\n\n\n//# sourceURL=webpack:///./src/components/CardArea.vue?./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -3300,7 +3312,7 @@ eval("//\n//\n//\n//\n\n\n\n//# sourceURL=webpack:///./src/components/Header.vue
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ \"./node_modules/axios/index.js\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n\n\nconst URL_BASE = 'http://localhost:8080/api/v1/';\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  data() {\n    return {\n        packages: ''\n    }\n  },\n  methods: {\n      submit: function(){\n          axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(URL_BASE+this.packages).then((res) => {\n              console.log(res);\n          })\n      }\n  }\n});\n\n\n//# sourceURL=webpack:///./src/components/InputForm.vue?./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ \"./node_modules/axios/index.js\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n\n\nconst URL_BASE = 'http://localhost:8080/api/v1/';\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  data() {\n    return {\n        packageName: ''\n    }\n  },\n  methods: {\n      submit: function(){\n          axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(URL_BASE+this.packageName).then((res) => {\n              console.log(res);\n          })\n      }\n  }\n});\n\n\n//# sourceURL=webpack:///./src/components/InputForm.vue?./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -3312,7 +3324,19 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var axio
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\n    \"div\",\n    { attrs: { id: \"app\" } },\n    [_c(\"Header\"), _vm._v(\" \"), _c(\"InputForm\")],\n    1\n  )\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./src/App.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\n    \"div\",\n    { attrs: { id: \"app\" } },\n    [_c(\"Header\"), _vm._v(\" \"), _c(\"InputForm\"), _vm._v(\" \"), _c(\"CardArea\")],\n    1\n  )\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./src/App.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options");
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./src/components/CardArea.vue?vue&type=template&id=3fb49d26&":
+/*!**************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/components/CardArea.vue?vue&type=template&id=3fb49d26& ***!
+  \**************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\n    \"div\",\n    [\n      _c(\"b-card\", { staticClass: \"text-left\" }, [\n        _c(\"div\", { staticClass: \"bg-default text-dark\" }, [\n          _vm._v(\"\\n    This is some content within the default \"),\n          _c(\"samp\", [_vm._v(\"<b-card-body>\")]),\n          _vm._v(\" block of the\\n    \"),\n          _c(\"samp\", [_vm._v(\"<b-card>\")]),\n          _vm._v(\n            \" component. Notice the padding between the card's border and this\\n    gray \"\n          ),\n          _c(\"samp\", [_vm._v(\"<div>\")]),\n          _vm._v(\".\\n    \")\n        ])\n      ])\n    ],\n    1\n  )\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./src/components/CardArea.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -3336,7 +3360,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\n    \"div\",\n    _vm._l([\"\"], function(size) {\n      return _c(\n        \"b-input-group\",\n        {\n          key: size,\n          staticClass: \"mb-3\",\n          attrs: { size: size, prepend: \"Package\" }\n        },\n        [\n          _c(\"b-form-input\", {\n            model: {\n              value: _vm.packages,\n              callback: function($$v) {\n                _vm.packages = $$v\n              },\n              expression: \"packages\"\n            }\n          }),\n          _vm._v(\" \"),\n          _c(\n            \"b-input-group-append\",\n            [\n              _c(\n                \"b-button\",\n                {\n                  attrs: { size: \"sm\", text: \"Button\", variant: \"success\" },\n                  on: { click: _vm.submit }\n                },\n                [_vm._v(\"Search\")]\n              )\n            ],\n            1\n          )\n        ],\n        1\n      )\n    }),\n    1\n  )\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./src/components/InputForm.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\n    \"div\",\n    _vm._l([\"\"], function(size) {\n      return _c(\n        \"b-input-group\",\n        {\n          key: size,\n          staticClass: \"mb-3\",\n          attrs: { size: size, prepend: \"Package\" }\n        },\n        [\n          _c(\"b-form-input\", {\n            model: {\n              value: _vm.packageName,\n              callback: function($$v) {\n                _vm.packageName = $$v\n              },\n              expression: \"packageName\"\n            }\n          }),\n          _vm._v(\" \"),\n          _c(\n            \"b-input-group-append\",\n            [\n              _c(\n                \"b-button\",\n                {\n                  attrs: { size: \"sm\", text: \"Button\", variant: \"success\" },\n                  on: { click: _vm.submit }\n                },\n                [_vm._v(\"Search\")]\n              )\n            ],\n            1\n          )\n        ],\n        1\n      )\n    }),\n    1\n  )\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./src/components/InputForm.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -3408,6 +3432,42 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _nod
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_template_id_7ba5bd90___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../node_modules/vue-loader/lib??vue-loader-options!./App.vue?vue&type=template&id=7ba5bd90& */ \"./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./src/App.vue?vue&type=template&id=7ba5bd90&\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_template_id_7ba5bd90___WEBPACK_IMPORTED_MODULE_0__[\"render\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_template_id_7ba5bd90___WEBPACK_IMPORTED_MODULE_0__[\"staticRenderFns\"]; });\n\n\n\n//# sourceURL=webpack:///./src/App.vue?");
+
+/***/ }),
+
+/***/ "./src/components/CardArea.vue":
+/*!*************************************!*\
+  !*** ./src/components/CardArea.vue ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _CardArea_vue_vue_type_template_id_3fb49d26___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CardArea.vue?vue&type=template&id=3fb49d26& */ \"./src/components/CardArea.vue?vue&type=template&id=3fb49d26&\");\n/* harmony import */ var _CardArea_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CardArea.vue?vue&type=script&lang=js& */ \"./src/components/CardArea.vue?vue&type=script&lang=js&\");\n/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ \"./node_modules/vue-loader/lib/runtime/componentNormalizer.js\");\n\n\n\n\n\n/* normalize component */\n\nvar component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(\n  _CardArea_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n  _CardArea_vue_vue_type_template_id_3fb49d26___WEBPACK_IMPORTED_MODULE_0__[\"render\"],\n  _CardArea_vue_vue_type_template_id_3fb49d26___WEBPACK_IMPORTED_MODULE_0__[\"staticRenderFns\"],\n  false,\n  null,\n  null,\n  null\n  \n)\n\n/* hot reload */\nif (false) { var api; }\ncomponent.options.__file = \"src/components/CardArea.vue\"\n/* harmony default export */ __webpack_exports__[\"default\"] = (component.exports);\n\n//# sourceURL=webpack:///./src/components/CardArea.vue?");
+
+/***/ }),
+
+/***/ "./src/components/CardArea.vue?vue&type=script&lang=js&":
+/*!**************************************************************!*\
+  !*** ./src/components/CardArea.vue?vue&type=script&lang=js& ***!
+  \**************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_vue_loader_lib_index_js_vue_loader_options_CardArea_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/vue-loader/lib??vue-loader-options!./CardArea.vue?vue&type=script&lang=js& */ \"./node_modules/vue-loader/lib/index.js?!./src/components/CardArea.vue?vue&type=script&lang=js&\");\n/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__[\"default\"] = (_node_modules_vue_loader_lib_index_js_vue_loader_options_CardArea_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[\"default\"]); \n\n//# sourceURL=webpack:///./src/components/CardArea.vue?");
+
+/***/ }),
+
+/***/ "./src/components/CardArea.vue?vue&type=template&id=3fb49d26&":
+/*!********************************************************************!*\
+  !*** ./src/components/CardArea.vue?vue&type=template&id=3fb49d26& ***!
+  \********************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CardArea_vue_vue_type_template_id_3fb49d26___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../node_modules/vue-loader/lib??vue-loader-options!./CardArea.vue?vue&type=template&id=3fb49d26& */ \"./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./src/components/CardArea.vue?vue&type=template&id=3fb49d26&\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CardArea_vue_vue_type_template_id_3fb49d26___WEBPACK_IMPORTED_MODULE_0__[\"render\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CardArea_vue_vue_type_template_id_3fb49d26___WEBPACK_IMPORTED_MODULE_0__[\"staticRenderFns\"]; });\n\n\n\n//# sourceURL=webpack:///./src/components/CardArea.vue?");
 
 /***/ }),
 
