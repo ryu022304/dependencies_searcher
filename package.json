@@ -19,7 +19,8 @@
   "homepage": "https://github.com/ryu022304/dependencies_searcher#readme",
   "dependencies": {
     "npm-check-updates": "^3.1.20",
-    "vue": "^2.6.10"
+    "vue": "^2.6.10",
+    "vuex": "^3.1.1"
   },
   "devDependencies": {
     "axios": "^0.19.0",

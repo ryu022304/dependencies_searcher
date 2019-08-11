@@ -17,6 +17,7 @@
 
 <script>
   import axios from 'axios';
+  import store from '../store';
   const URL_BASE = 'http://localhost:8080/api/v1/';
   export default {
     data() {
@@ -28,6 +29,9 @@
         submit: function(){
             axios.get(URL_BASE+this.packageName).then((res) => {
                 console.log(res);
+                //store.state.packages = res.data.packages;
+                this.$store.commit('updateList', res.data.packages);
+                console.log(store.state.packages);
             })
         }
     }
