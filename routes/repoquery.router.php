@@ -1,10 +1,10 @@
 <?php
-$app->get('/api/v1/{name}', function($request, $response){
+$app->get('/api/v1/repoquery/{name}', function($request, $response){
     $name = $request->getAttribute('name');
     $res = getDependencies($name);
     $packages = array();
     foreach($res as $key => $val){
-        $tmp = array('id'=>$key, 'name'=>$val);
+        $tmp = array('id'=>$key, 'data'=>$val);
         array_push($packages, $tmp);
     }
     $data = [
@@ -22,8 +22,6 @@ $app->get('/api/v1/{name}', function($request, $response){
  * @return array $out コマンドの実行結果
 */
 function getDependencies($packageName){
-    //exec('ls '.$packageName, $out, $rc);
-    //exec('pwd', $out, $rc);
-    exec('repoquery --requires --resolve --recursive --qf="%{name}-%{version}-%{release}.%{arch}" '.$packageName, $out, $rc);
+    exec('repoquery --requires --resolve --recursive --nvr '.$packageName, $out, $rc);
     return $out;
 }

@@ -18,7 +18,7 @@
 <script>
   import axios from 'axios';
   import store from '../store';
-  const URL_BASE = 'http://192.168.33.10:8080/api/v1/';
+  const URL_BASE = 'http://192.168.33.10:8080/api/v1/repoquery/';
   export default {
     data() {
       return {
