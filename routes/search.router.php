@@ -3,9 +3,9 @@ $app->get('/api/v1/search/{name}', function($request, $response){
     $name = $request->getAttribute('name');
     $res = getPackageList($name);
     $packages = array();
-    print_r($res);
+    //print_r($res);
     foreach($res as $key => $val){
-        $tmp = array('id'=>$key, 'data'=>$val);
+        $tmp = array('id'=>$key, 'package'=>$val['package'], 'abstract'=>$val['abstract']);
         array_push($packages, $tmp);
     }
     $data = [

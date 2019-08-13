@@ -3277,7 +3277,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_Header_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/Header.vue */ \"./src/components/Header.vue\");\n/* harmony import */ var _components_InputForm_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/InputForm.vue */ \"./src/components/InputForm.vue\");\n/* harmony import */ var _components_CardArea_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/CardArea.vue */ \"./src/components/CardArea.vue\");\n//\n//\n//\n//\n//\n//\n//\n//\n\n\n\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  name: 'app',\n  components: {\n    Header: _components_Header_vue__WEBPACK_IMPORTED_MODULE_0__[\"default\"],\n    InputForm: _components_InputForm_vue__WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n    CardArea: _components_CardArea_vue__WEBPACK_IMPORTED_MODULE_2__[\"default\"]\n  }\n});\n\n\n//# sourceURL=webpack:///./src/App.vue?./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_Header_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/Header.vue */ \"./src/components/Header.vue\");\n/* harmony import */ var _components_InputForm_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/InputForm.vue */ \"./src/components/InputForm.vue\");\n/* harmony import */ var _components_CardArea_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/CardArea.vue */ \"./src/components/CardArea.vue\");\n/* harmony import */ var _components_PackageTable_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/PackageTable.vue */ \"./src/components/PackageTable.vue\");\n//\n//\n//\n//\n//\n//\n//\n//\n//\n\n\n\n\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  name: 'app',\n  components: {\n    Header: _components_Header_vue__WEBPACK_IMPORTED_MODULE_0__[\"default\"],\n    InputForm: _components_InputForm_vue__WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n    CardArea: _components_CardArea_vue__WEBPACK_IMPORTED_MODULE_2__[\"default\"],\n    PackageTable: _components_PackageTable_vue__WEBPACK_IMPORTED_MODULE_3__[\"default\"]\n  }\n});\n\n\n//# sourceURL=webpack:///./src/App.vue?./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -3312,7 +3312,19 @@ eval("//\n//\n//\n//\n\n\n\n//# sourceURL=webpack:///./src/components/Header.vue
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ \"./node_modules/axios/index.js\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../store */ \"./src/store.js\");\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n\n\n\nconst URL_BASE = 'http://192.168.33.10:8080/api/v1/repoquery/';\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  data() {\n    return {\n        packageName: ''\n    }\n  },\n  methods: {\n      submit: function(){\n          axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(URL_BASE+this.packageName).then((res) => {\n              console.log(res);\n              //store.state.packages = res.data.packages;\n              this.$store.commit('updateList', res.data.packages);\n              console.log(_store__WEBPACK_IMPORTED_MODULE_1__[\"default\"].state.packages);\n          })\n      }\n  }\n});\n\n\n//# sourceURL=webpack:///./src/components/InputForm.vue?./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ \"./node_modules/axios/index.js\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../store */ \"./src/store.js\");\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n\n\n\nconst URL_BASE = 'http://192.168.33.10:8080/api/v1/search/';\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  data() {\n    return {\n        packageName: ''\n    }\n  },\n  methods: {\n      submit: function(){\n          axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(URL_BASE+this.packageName).then((res) => {\n              console.log(res.data);\n              //store.state.packages = res.data.packages;\n              this.$store.commit('searchList', res.data.packages);\n              //console.log(store.state.packages);\n          })\n      }\n  }\n});\n\n\n//# sourceURL=webpack:///./src/components/InputForm.vue?./node_modules/vue-loader/lib??vue-loader-options");
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/index.js?!./src/components/PackageTable.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib??vue-loader-options!./src/components/PackageTable.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../store */ \"./src/store.js\");\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n    data() {\n      return {\n        fields: ['selected', 'package', 'abstract'],\n        selectMode: 'multi',\n        selected: []\n      }\n    },\n    methods: {\n      rowSelected(items) {\n        this.selected = items\n      },\n      getDepList() {\n        console.log(this.selected);\n      }\n    },\n    computed: {\n        searchList(){\n            console.log(this.$store.getters.getSearchList);\n            return this.$store.getters.getSearchList;\n            //this.items = this.$store.getters.getSearchList;\n        }\n    },\n    watch: {\n        searchList(newVal, oldVal){\n            //console.log('watch', newVal);\n        }\n    }\n});\n\n\n//# sourceURL=webpack:///./src/components/PackageTable.vue?./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -3324,7 +3336,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var axio
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\n    \"div\",\n    { attrs: { id: \"app\" } },\n    [_c(\"Header\"), _vm._v(\" \"), _c(\"InputForm\"), _vm._v(\" \"), _c(\"CardArea\")],\n    1\n  )\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./src/App.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\n    \"div\",\n    { attrs: { id: \"app\" } },\n    [\n      _c(\"Header\"),\n      _vm._v(\" \"),\n      _c(\"InputForm\"),\n      _vm._v(\" \"),\n      _c(\"CardArea\"),\n      _vm._v(\" \"),\n      _c(\"PackageTable\")\n    ],\n    1\n  )\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./src/App.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -3361,6 +3373,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\n    \"div\",\n    _vm._l([\"\"], function(size) {\n      return _c(\n        \"b-input-group\",\n        {\n          key: size,\n          staticClass: \"mb-3\",\n          attrs: { size: size, prepend: \"Package\" }\n        },\n        [\n          _c(\"b-form-input\", {\n            model: {\n              value: _vm.packageName,\n              callback: function($$v) {\n                _vm.packageName = $$v\n              },\n              expression: \"packageName\"\n            }\n          }),\n          _vm._v(\" \"),\n          _c(\n            \"b-input-group-append\",\n            [\n              _c(\n                \"b-button\",\n                {\n                  attrs: { size: \"sm\", text: \"Button\", variant: \"success\" },\n                  on: { click: _vm.submit }\n                },\n                [_vm._v(\"Search\")]\n              )\n            ],\n            1\n          )\n        ],\n        1\n      )\n    }),\n    1\n  )\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./src/components/InputForm.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options");
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./src/components/PackageTable.vue?vue&type=template&id=51659358&":
+/*!******************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/components/PackageTable.vue?vue&type=template&id=51659358& ***!
+  \******************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\n    \"div\",\n    [\n      _c(\n        \"b-card\",\n        { staticClass: \"text-left\", attrs: { header: \"Package List\" } },\n        [\n          _c(\n            \"b-table\",\n            {\n              attrs: {\n                selectable: \"\",\n                \"select-mode\": _vm.selectMode,\n                selectedVariant: \"success\",\n                items: _vm.searchList,\n                fields: _vm.fields,\n                responsive: \"sm\",\n                \"caption-top\": \"\"\n              },\n              on: { \"row-selected\": _vm.rowSelected },\n              scopedSlots: _vm._u([\n                {\n                  key: \"selected\",\n                  fn: function(ref) {\n                    var rowSelected = ref.rowSelected\n                    return [rowSelected ? _c(\"span\", [_vm._v(\"✔\")]) : _vm._e()]\n                  }\n                }\n              ])\n            },\n            [\n              _c(\n                \"template\",\n                { slot: \"table-caption\" },\n                [\n                  _vm._v(\"\\n            Search Result\\n            \"),\n                  _c(\n                    \"b-button\",\n                    {\n                      staticClass: \"float-lg-right\",\n                      attrs: { variant: \"primary\" },\n                      on: { click: _vm.getDepList }\n                    },\n                    [_vm._v(\"Get Dependent Packages\")]\n                  )\n                ],\n                1\n              )\n            ],\n            2\n          )\n        ],\n        1\n      )\n    ],\n    1\n  )\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./src/components/PackageTable.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -3555,6 +3579,42 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _nod
 
 /***/ }),
 
+/***/ "./src/components/PackageTable.vue":
+/*!*****************************************!*\
+  !*** ./src/components/PackageTable.vue ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _PackageTable_vue_vue_type_template_id_51659358___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PackageTable.vue?vue&type=template&id=51659358& */ \"./src/components/PackageTable.vue?vue&type=template&id=51659358&\");\n/* harmony import */ var _PackageTable_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PackageTable.vue?vue&type=script&lang=js& */ \"./src/components/PackageTable.vue?vue&type=script&lang=js&\");\n/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ \"./node_modules/vue-loader/lib/runtime/componentNormalizer.js\");\n\n\n\n\n\n/* normalize component */\n\nvar component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(\n  _PackageTable_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n  _PackageTable_vue_vue_type_template_id_51659358___WEBPACK_IMPORTED_MODULE_0__[\"render\"],\n  _PackageTable_vue_vue_type_template_id_51659358___WEBPACK_IMPORTED_MODULE_0__[\"staticRenderFns\"],\n  false,\n  null,\n  null,\n  null\n  \n)\n\n/* hot reload */\nif (false) { var api; }\ncomponent.options.__file = \"src/components/PackageTable.vue\"\n/* harmony default export */ __webpack_exports__[\"default\"] = (component.exports);\n\n//# sourceURL=webpack:///./src/components/PackageTable.vue?");
+
+/***/ }),
+
+/***/ "./src/components/PackageTable.vue?vue&type=script&lang=js&":
+/*!******************************************************************!*\
+  !*** ./src/components/PackageTable.vue?vue&type=script&lang=js& ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_vue_loader_lib_index_js_vue_loader_options_PackageTable_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/vue-loader/lib??vue-loader-options!./PackageTable.vue?vue&type=script&lang=js& */ \"./node_modules/vue-loader/lib/index.js?!./src/components/PackageTable.vue?vue&type=script&lang=js&\");\n/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__[\"default\"] = (_node_modules_vue_loader_lib_index_js_vue_loader_options_PackageTable_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[\"default\"]); \n\n//# sourceURL=webpack:///./src/components/PackageTable.vue?");
+
+/***/ }),
+
+/***/ "./src/components/PackageTable.vue?vue&type=template&id=51659358&":
+/*!************************************************************************!*\
+  !*** ./src/components/PackageTable.vue?vue&type=template&id=51659358& ***!
+  \************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PackageTable_vue_vue_type_template_id_51659358___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../node_modules/vue-loader/lib??vue-loader-options!./PackageTable.vue?vue&type=template&id=51659358& */ \"./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./src/components/PackageTable.vue?vue&type=template&id=51659358&\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PackageTable_vue_vue_type_template_id_51659358___WEBPACK_IMPORTED_MODULE_0__[\"render\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PackageTable_vue_vue_type_template_id_51659358___WEBPACK_IMPORTED_MODULE_0__[\"staticRenderFns\"]; });\n\n\n\n//# sourceURL=webpack:///./src/components/PackageTable.vue?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -3575,7 +3635,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue_
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ \"./node_modules/vue/dist/vue.runtime.esm.js\");\n/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ \"./node_modules/vuex/dist/vuex.esm.js\");\n\n\n\nvue__WEBPACK_IMPORTED_MODULE_0__[\"default\"].use(vuex__WEBPACK_IMPORTED_MODULE_1__[\"default\"])\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (new vuex__WEBPACK_IMPORTED_MODULE_1__[\"default\"].Store({\n    state: {\n        packages:[]\n    },\n    getters: {\n        getPackages: state => {\n            return state.packages\n        }\n    },\n    mutations: {\n        updateList(state, packages){\n            state.packages = packages\n        }\n    }\n}));\n\n//# sourceURL=webpack:///./src/store.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ \"./node_modules/vue/dist/vue.runtime.esm.js\");\n/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ \"./node_modules/vuex/dist/vuex.esm.js\");\n\n\n\nvue__WEBPACK_IMPORTED_MODULE_0__[\"default\"].use(vuex__WEBPACK_IMPORTED_MODULE_1__[\"default\"])\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (new vuex__WEBPACK_IMPORTED_MODULE_1__[\"default\"].Store({\n    state: {\n        packages:[],\n        searchList:[]\n    },\n    getters: {\n        getPackages: state => {\n            return state.packages\n        },\n        getSearchList: state => {\n            return state.searchList\n        }\n    },\n    mutations: {\n        updateList(state, packages){\n            state.packages = packages\n        },\n        searchList(state, search){\n            state.searchList = search\n        }\n    }\n}));\n\n//# sourceURL=webpack:///./src/store.js?");
 
 /***/ })
 
