@@ -6,7 +6,8 @@ Vue.use(Vuex)
 export default new Vuex.Store({
     state: {
         packages:[],
-        searchList:[]
+        searchList:[],
+        selectedPackages:[]
     },
     getters: {
         getPackages: state => {
@@ -14,6 +15,9 @@ export default new Vuex.Store({
         },
         getSearchList: state => {
             return state.searchList
+        },
+        getSelectedPackages: state => {
+            return state.selectedPackages
         }
     },
     mutations: {
@@ -22,6 +26,9 @@ export default new Vuex.Store({
         },
         searchList(state, search){
             state.searchList = search
+        },
+        selectedList(state, packages){
+            state.selectedPackages = packages
         }
     }
 })

@@ -28,10 +28,7 @@
     methods: {
         submit: function(){
             axios.get(URL_BASE+this.packageName).then((res) => {
-                console.log(res.data);
-                //store.state.packages = res.data.packages;
                 this.$store.commit('searchList', res.data.packages);
-                //console.log(store.state.packages);
             })
         }
     }

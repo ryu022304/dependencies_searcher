@@ -24,7 +24,9 @@
 </template>
 
 <script>
+import axios from 'axios';
 import store from '../store';
+const URL_BASE = 'http://192.168.33.10:8080/api/v1/repoquery/';
 export default {
     data() {
       return {
@@ -38,14 +40,27 @@ export default {
         this.selected = items
       },
       getDepList() {
-        console.log(this.selected);
+        let selectedPackages = [];
+        for(let k of Object.keys(this.selected)){
+          selectedPackages.push(this.selected[k]['package'].trim());
+        }
+        this.$store.commit('selectedList', selectedPackages);
+        console.log(selectedPackages);
+        console.log(URL_BASE+this.encodeURLplusOther(selectedPackages.join(' ')));
+        axios.get(URL_BASE+this.encodeURLplusOther(selectedPackages.join(' '))).then((res) => {
+          this.$store.commit('searchList', res.data.packages);
+        })
+        
+      },
+      encodeURLplusOther(url) {
+        return encodeURIComponent(url).replace(/[.-]/g, function(c) {
+          return '%' + c.charCodeAt(0).toString(16);
+        });
       }
     },
     computed: {
         searchList(){
-            console.log(this.$store.getters.getSearchList);
             return this.$store.getters.getSearchList;
-            //this.items = this.$store.getters.getSearchList;
         }
     },
     watch: {
