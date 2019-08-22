@@ -26,7 +26,8 @@
 <script>
 import axios from 'axios';
 import store from '../store';
-const URL_BASE = 'http://192.168.33.10:8080/api/v1/repoquery/';
+const qs = require('qs');
+const URL_BASE = 'http://192.168.33.10:8080/api/v1/repoquery';
 export default {
     data() {
       return {
@@ -46,16 +47,21 @@ export default {
         }
         this.$store.commit('selectedList', selectedPackages);
         console.log(selectedPackages);
-        console.log(URL_BASE+this.encodeURLplusOther(selectedPackages.join(' ')));
-        axios.get(URL_BASE+this.encodeURLplusOther(selectedPackages.join(' '))).then((res) => {
-          this.$store.commit('searchList', res.data.packages);
+        
+        // 選択されたパッケージ名の送付
+        axios.get(URL_BASE,{
+          params: {
+            name: selectedPackages
+          },
+          paramsSerializer: params => {
+            return qs.stringify(params)
+          }
+        }
+        ).then((res) => {
+          console.log(res.data);
+          this.$store.commit('updateList', res.data.packages);
         })
         
-      },
-      encodeURLplusOther(url) {
-        return encodeURIComponent(url).replace(/[.-]/g, function(c) {
-          return '%' + c.charCodeAt(0).toString(16);
-        });
       }
     },
     computed: {

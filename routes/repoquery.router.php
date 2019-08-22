@@ -1,9 +1,7 @@
 <?php
-$app->get('/api/v1/repoquery/{name}', function($request, $response){
-    $name = $request->getAttribute('name');
-    $names = explode(' ',$name);
-    print_r($names);
-    $res = getDependencies($names);
+$app->get('/api/v1/repoquery', function($request, $response){
+    $names = $request->getQueryParams('name');
+    $res = getDependencies($names['name']);
     $packages = array();
     foreach($res as $key => $val){
         $tmp = array('id'=>$key, 'data'=>$val);
@@ -13,8 +11,7 @@ $app->get('/api/v1/repoquery/{name}', function($request, $response){
         'status' => 'OK',
         'packages' => $packages
     ];
-
-    return $response->withJson($data, 200, JSON_PRETTY_PRINT);
+    return $response->withJson($data, 200);
 });
 
 /*

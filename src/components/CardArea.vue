@@ -15,6 +15,7 @@ import store from '../store';
 export default {
     computed: {
         packageList(){
+            console.log(this.$store.getters.getPackages);
             return this.$store.getters.getPackages;
         }
     },
