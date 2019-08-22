@@ -18,7 +18,7 @@
 <script>
   import axios from 'axios';
   import store from '../store';
-  const URL_BASE = 'http://localhost:8080/api/v1/';
+  const URL_BASE = 'http://192.168.33.10:8080/api/v1/search/';
   export default {
     data() {
       return {
@@ -28,10 +28,8 @@
     methods: {
         submit: function(){
             axios.get(URL_BASE+this.packageName).then((res) => {
-                console.log(res);
-                //store.state.packages = res.data.packages;
-                this.$store.commit('updateList', res.data.packages);
-                console.log(store.state.packages);
+              console.log(res.data);
+                this.$store.commit('searchList', res.data.packages);
             })
         }
     }
