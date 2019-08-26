@@ -2,6 +2,7 @@
 <div>
     <b-card class="text-left" header="Package List" >
         <b-table
+            sticky-header="true"
             selectable
             :select-mode="selectMode"
             selectedVariant="success"
