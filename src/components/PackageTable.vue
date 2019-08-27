@@ -1,6 +1,6 @@
 <template>
 <div>
-    <b-card class="text-left" header="Package List" >
+    <b-card class="text-left" header="Package List">
         <b-table
             sticky-header="true"
             selectable
@@ -13,7 +13,6 @@
             caption-top
         >
         <template slot="table-caption">
-            Search Result
             <b-button class="float-lg-right" variant="primary" @click="getDepList">Get Dependent Packages</b-button>
         </template>
         <template slot="selected" slot-scope="{ rowSelected }">
