@@ -5,5 +5,9 @@
 <script>
 </script>
 
-<style>
+<style scoped>
+@import url('https://fonts.googleapis.com/css?family=Exo&display=swap');
+h1{
+    font-family: 'Exo', sans-serif;
+}
 </style>
