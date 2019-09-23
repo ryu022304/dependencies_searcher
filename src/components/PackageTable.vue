@@ -1,7 +1,13 @@
 <template>
-<div>
-    <b-card class="text-left" header="Package List" >
+<div role="tablist">
+  <b-card no-body class="mb-1">
+    <b-card-header header-tag="header" class="p-1" role="tab">
+      <b-button block href="#" v-b-toggle.collapse-list variant="info" class="text-left">Package List</b-button>
+    </b-card-header>
+    <b-collapse id="collapse-list" role="tabpanel">
+        <b-card-text>{{ text }}</b-card-text>
         <b-table
+            sticky-header="true"
             selectable
             :select-mode="selectMode"
             selectedVariant="success"
@@ -12,15 +18,16 @@
             caption-top
         >
         <template slot="table-caption">
-            Search Result
             <b-button class="float-lg-right" variant="primary" @click="getDepList">Get Dependent Packages</b-button>
         </template>
         <template slot="selected" slot-scope="{ rowSelected }">
             <span v-if="rowSelected">✔</span>
         </template>
         </b-table>
-    </b-card>
+    </b-collapse>
+  </b-card>
 </div>
+
 </template>
 
 <script>
@@ -31,6 +38,9 @@ const URL_BASE = 'http://192.168.33.10:8080/api/v1/repoquery';
 export default {
     data() {
       return {
+        text: `
+            検索キーワードで該当したパッケージを表示します。
+            `,
         fields: ['selected', 'package', 'abstract'],
         selectMode: 'multi',
         selected: []
