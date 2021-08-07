@@ -18,22 +18,22 @@
   },
   "homepage": "https://github.com/ryu022304/dependencies_searcher#readme",
   "dependencies": {
-    "npm-check-updates": "^3.1.21",
-    "vue": "^2.6.10",
-    "vuex": "^3.1.1"
+    "npm-check-updates": "^11.8.3",
+    "vue": "^2.6.14",
+    "vuex": "^3.6.2"
   },
   "devDependencies": {
-    "axios": "^0.19.0",
-    "bootstrap": "^4.3.1",
-    "bootstrap-vue": "^2.0.0-rc.28",
-    "css-loader": "^3.2.0",
-    "jquery": "^3.4.1",
+    "axios": "^0.21.1",
+    "bootstrap": "^5.1.0",
+    "bootstrap-vue": "^2.21.2",
+    "css-loader": "^6.2.0",
+    "jquery": "^3.6.0",
     "popper.js": "^1.15.0",
-    "style-loader": "^1.0.0",
-    "vue-loader": "^15.7.1",
-    "vue-template-compiler": "^2.6.10",
-    "webpack": "^4.39.2",
-    "webpack-cli": "^3.3.7",
-    "webpack-dev-server": "^3.8.0"
+    "style-loader": "^3.2.1",
+    "vue-loader": "^15.9.8",
+    "vue-template-compiler": "^2.6.14",
+    "webpack": "^5.49.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
   }
 }
