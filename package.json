@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/ryu022304/dependencies_searcher#readme",
   "dependencies": {
-    "npm-check-updates": "^11.8.3",
+    "npm-check-updates": "^16.7.4",
     "vue": "^2.6.14",
     "vuex": "^3.6.2"
   },
